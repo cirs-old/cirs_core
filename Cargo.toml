@@ -1,0 +1,32 @@
+[dependencies]
+# cirs_core has no dependencies
+
+[features]
+default = []
+
+## More feature gates coming soon to a libcirs_core near you.
+
+[lib]
+crate-type = [
+  "dylib",
+  "staticlib"
+]
+test = false
+
+[package]
+authors = [
+  "The Cirs Project Developers",
+  # Since code may/ will be taken from libcore, its fair to attribute them
+  "The Rust Project Developers"
+]
+license = "MIT/Apache-2.0"
+name = "cirs_core"
+readme = "README.md"
+version = "0.1.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+lto = true
+panic = "abort"
